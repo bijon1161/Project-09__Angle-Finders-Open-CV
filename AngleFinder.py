@@ -14,4 +14,6 @@ def mousePoints(event,x,y,flags,params):
 while True:
     cv2.imshow('Image',img)
     cv2.setMouseCallback('Image',mousePoints)
-    cv2.waitKey(1)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        pointsList=[]
+        img = cv2.imread(path)
